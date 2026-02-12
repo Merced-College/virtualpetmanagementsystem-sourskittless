@@ -1,9 +1,9 @@
 #include <iostream>
-#include "Pet.h"
+#include "Dog.h"
 
 int main() {
-    Dog dog1("Rex", "Dog", 3, 6);
-    Dog dog2("Sam", "Dog", 2, 4);
+    Dog dog1("Rex", 5, "Labrador");
+    Dog dog2("Sam", 3, "Beagle");
 
     std::cout << "Dog 1 Info:\n";
     dog1.printInfo();

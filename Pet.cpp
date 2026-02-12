@@ -53,9 +53,19 @@ int Pet::compareTo(const Pet& other) const {
 }
 
 // Output
-void Pet::printInfo() const {
+void Pet::printInfo() {
     std::cout << "Pet Name: " << name << std::endl;
     std::cout << "Species: " << species << std::endl;
     std::cout << "Age: " << age << std::endl;
     std::cout << "Hunger Level: " << hungerLevel << "/10" << std::endl;
 }
+
+//added per assignment instructions
+//makes sound
+void Pet::makeSound() {
+    std::cout << name << " makes an undefined sound.\n";
+}
+
+// Destructor
+Pet::~Pet() {}
+

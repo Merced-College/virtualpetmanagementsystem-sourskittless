@@ -1,61 +1,21 @@
 #include "Dog.h"
+#include <iostream>
 
 // Default constructor
-Dog::Dog() : name("Unnamed"), species("Unknown"), age(0), hungerLevel(5) {}
+Dog::Dog() : Pet(), breed("Unknown") {}
 
 // Parameterized constructor
-Dog::Dog(const std::string& name, const std::string& species, int age, int hungerLevel)
-    : name(name), species(species), age(age), hungerLevel(hungerLevel) {}
-
-// Accessors
-std::string Pet::getName() const {
-    return name;
-}
-
-std::string Pet::getSpecies() const {
-    return species;
-}
-
-int Pet::getAge() const {
-    return age;
-}
-
-int Pet::getHungerLevel() const {
-    return hungerLevel;
-}
-
-// Mutators
-void Pet::setName(const std::string& name) {
-    this->name = name;
-}
-
-void Pet::setSpecies(const std::string& species) {
-    this->species = species;
-}
-
-void Pet::setAge(int age) {
-    if (age >= 0) {
-        this->age = age;
-    }
-}
-
-void Pet::setHungerLevel(int level) {
-    if (level >= 0 && level <= 10) {
-        hungerLevel = level;
-    }
-}
-
-// CompareTo
-int Pet::compareTo(const Pet& other) const {
-    if (name < other.name) return -1;
-    if (name > other.name) return 1;
-    return 0;
-}
+//Dog::Dog(const std::string& name, int age, const std::string& breed) : Pet(name, "Dog", age, 0), breed(breed) {}
 
 // Output
-void Pet::printInfo() const {
-    std::cout << "Pet Name: " << name << std::endl;
-    std::cout << "Species: " << species << std::endl;
-    std::cout << "Age: " << age << std::endl;
-    std::cout << "Hunger Level: " << hungerLevel << "/10" << std::endl;
+void Dog::printInfo()  {
+    std::cout << "Pet Name: " << getName() << std::endl;
+    std::cout << "Breed: " << breed << std::endl;
+    std::cout << "Age: " << getAge() << std::endl;
+}
+ 
+//added per assignment instructions
+//makes sound
+void Dog::makeSound(){
+    std::cout << getName() << " woof woof.\n";
 }

@@ -2,37 +2,38 @@
 #define DOG_H
 
 #include <string>
-#include <iostream>
+#include "Pet.h"
 
-class Pet {
+class Dog : public Pet {
 private:
-    std::string name;
-    std::string species;
-    int age;
-    int hungerLevel; // 0 (full) to 10 (starving)
+    std::string breed;
 
 public:
     // Constructors
-    Pet();
-    Pet(const std::string& name, const std::string& species, int age, int hungerLevel);
+    Dog();
+    Dog(const std::string& name, int age, const std::string& breed) : Pet(name, "Dog", age, 0), breed(breed) {}
+;
 
     // Accessors (Getters)
     std::string getName() const;
     std::string getSpecies() const;
+    std::string getBreed() const;
     int getAge() const;
-    int getHungerLevel() const;
+   
 
     // Mutators (Setters)
     void setName(const std::string& name);
     void setSpecies(const std::string& species);
+    void setBreed(const std::string& breed);
     void setAge(int age);
     void setHungerLevel(int level);
 
     // CompareTo
-    int compareTo(const Pet& other) const; // Returns -1, 0, or 1 based on name comparison
+    int compareTo(const Dog& other) const; // Returns -1, 0, or 1 based on name comparison
 
     // Output Function
-    void printInfo() const;
+    void printInfo() ;
+    void makeSound() ;
 };
 
 #endif

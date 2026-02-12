@@ -9,6 +9,7 @@
                 "-g",
                 "main.cpp",
                 "Pet.cpp",
+                "Dog.cpp",
                 "-o",
                 "main"
             ],
