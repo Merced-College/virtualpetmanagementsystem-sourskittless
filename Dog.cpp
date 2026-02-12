@@ -1,10 +1,10 @@
-#include "Pet.h"
+#include "Dog.h"
 
 // Default constructor
-Pet::Pet() : name("Unnamed"), species("Unknown"), age(0), hungerLevel(5) {}
+Dog::Dog() : name("Unnamed"), species("Unknown"), age(0), hungerLevel(5) {}
 
 // Parameterized constructor
-Pet::Pet(const std::string& name, const std::string& species, int age, int hungerLevel)
+Dog::Dog(const std::string& name, const std::string& species, int age, int hungerLevel)
     : name(name), species(species), age(age), hungerLevel(hungerLevel) {}
 
 // Accessors
