@@ -7,3 +7,4 @@ virtual-pet/
 ├── Pet.cpp
 └── Pet.h
 
+We could not get our code to run even though it was all correct. Tried to debug and see if it was something in the Json file but still could not find the reason why the code wouldn't compile.
